@@ -7,7 +7,11 @@ int convert(long long n) {
     while (n != 0) {
         rem = n % 10;
         n /= 10;
-        dec += rem * pow(2, i);
+	int power=1,j;
+	for(j=1;j<=i;++j){
+	power=power*2;
+	}
+        dec += rem * power;
         ++i;
     }
     return dec;
