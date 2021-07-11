@@ -58,7 +58,7 @@ int main(){
 		hexadecimalNumber[i++]= temp;
 		quotient = quotient / 16;
 	}
-	printf("Equivalent hexadecimal value of decimal number %d: ",decimalNumber);
+	printf("Equivalent hexadecimal value of decimal number %ld: ",decimalNumber);
 	for (j = i -1 ;j> 0;j--)
 	      printf("%c",hexadecimalNumber[j]);
 
@@ -85,7 +85,7 @@ int main(){
         octalNumber[i++] = quotient % 8;
         quotient = quotient / 8;
     }
-    printf("Equivalent octal value of decimal no %d: ", decimalnum);
+    printf("Equivalent octal value of decimal no %ld: ", decimalnum);
     for (j = i - 1; j > 0; j--)
         printf("%d", octalNumber[j]);
 
