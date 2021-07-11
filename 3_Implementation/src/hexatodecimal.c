@@ -1,4 +1,4 @@
-#include <header.h>
+#include<header.h>
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
@@ -15,8 +15,11 @@ int HexadecimalToDecimal(char *hex) {
         else{
             r = hex[i] - 'A' + 10;
         }
-        
-        decimal = decimal + r * pow(16 , p);
+        int power=1,j;
+	for(j=1;j<=p;++j){
+	power=power*16;
+	}
+        decimal = decimal + r * power;
         ++p;
     }
     
