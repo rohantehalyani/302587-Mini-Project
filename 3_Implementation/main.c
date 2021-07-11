@@ -99,8 +99,12 @@ int main(){
     printf("Enter any octal number: ");
     scanf("%ld", &octal);
     while (octal != 0)
-    {
-        decimal =  decimal +(octal % 10)* pow(8, i++);
+    {	
+	int power=1,j;
+	for(j=1;j<=i++;++j){
+	power=power*8;
+	}
+        decimal =  decimal +(octal % 10)* power;
         octal = octal / 10;
     }
     printf("Equivalent decimal value: %ld",decimal);
