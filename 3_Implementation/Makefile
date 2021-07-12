@@ -24,6 +24,7 @@ endif
 
 # All source code files
 SRC = main.c\
+inc/header.h\
 src/convert.c\
 src/hexatodecimal.c\
 
@@ -36,7 +37,7 @@ unity/unity.c
 TEST_OUTPUT = $(BULID)/Test_$(PROJECT_NAME).$(EXEC)
 
 # All include folders with header files
-INC = inc/header.h\
+INC = inc\
 -Iunity\
 
 INCLUDE_LIBS = -lcunit
