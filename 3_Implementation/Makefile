@@ -68,5 +68,11 @@ clean:
 $(BUILD):
 	mkdir build
 
+valgrind_main: all
+	valgrind $(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
+
+valgrind_test: $(SRC) $(TEST_SRC) $(BUILD)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	valgrind $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 
