@@ -22,6 +22,10 @@ else
 	endif
 endif
 
+
+# Main file name
+MAIN_NAME = main.c
+
 # All source code files
 SRC = main.c\
 src/convert.c\
@@ -32,6 +36,8 @@ TEST_SRC = src/convert.c\
 src/hexatodecimal.c\
 test/test_main.c\
 unity/unity.c
+
+
 
 TEST_OUTPUT = $(BULID)/Test_$(PROJECT_NAME).$(EXEC)
 
