@@ -24,7 +24,7 @@
 ![System - Diagram](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/flowchart.PNG)
 
 ## SWOT Analysis
-![SWOT - Analysis](https://github.com/abhaysahu10/302569/blob/e8e389c65d29d18ed087f16e59217e883083c298/1_Requirements/SWOT.png)
+![SWOT - Analysis](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/swto.PNG)
 
 # Detail Requirements
 ## High Level Requirements:
