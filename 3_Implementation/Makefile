@@ -36,7 +36,7 @@ unity/unity.c
 TEST_OUTPUT = $(BULID)/Test_$(PROJECT_NAME).$(EXEC)
 
 # All include folders with header files
-INC = inc\header.h
+INC = inc/header.h\
 -Iunity\
 
 INCLUDE_LIBS = -lcunit
