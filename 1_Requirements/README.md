@@ -26,20 +26,3 @@
 ## SWOT Analysis
 ![SWOT - Analysis](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/swto.PNG)
 
-# Detail Requirements
-## High Level Requirements:
-
-| ID | Description | Status |
-|:---:|:---:|:---:|
-|HR_01|Trade Calls|Implemented|
-|HR_02|Back Test Paramenters|Future|
-
-## Low Level Requirements:
-| ID | Description | HR_ID | Status |
-|:---:|:---:|:---:|:---:|
-|LR_01|BUY/SELL|HR_01|Implemented|
-|LR_02|Price|HR_01|Implemented|
-|LR_03|Date|HR_01|Implemented|
-|LR_04|Total Profit/Loss %|HR_02|Future|
-|LR_05|Total Trades Closed|HR_02|Future|
-|LR_06|Profit Factor|HR_2|Future|
