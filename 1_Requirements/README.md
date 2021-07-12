@@ -11,12 +11,14 @@
  6. Octal to Decimal
 
 ## Research
-* For conversion of a simple decimal to binary we have used conventional method 
-* There 
-* 1. Divide the number by 2.
-* 2. Get the integer quotient for the next iteration.
-* 3. Get the remainder for the binary digit.
-* 4. Repeat the steps until the quotient is equal to 0.
+ For conversion of a simple decimal to binary we have used conventional method 
+  
+ 1. Divide the number by 2.
+ 2. Get the integer quotient for the next iteration.
+ 3. Get the remainder for the binary digit.
+ 4. Repeat the steps until the quotient is equal to 0.
+
+
 ![](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/example.PNG)
 ## Defining the System
 ![System - Diagram](https://github.com/abhaysahu10/302569/blob/e8e389c65d29d18ed087f16e59217e883083c298/1_Requirements/UML%20diagram.png)
