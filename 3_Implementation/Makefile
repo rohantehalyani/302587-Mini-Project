@@ -3,6 +3,7 @@
 
 # Name of the Project
 PROJECT_NAME = NumberConversion
+TEST_PROJT_NAME = Test_$(PROJT_NAME)
 
 # Output directory
 BUILD = build
@@ -27,49 +28,56 @@ endif
 MAIN_NAME = main.c
 
 # All source code files
-SRC = main.c\
-src/convert.c\
-src/hexatodecimal.c\
+SRC = src/convert.c\
+src/hexatodecimal.c
 
 # All test source files
-TEST_SRC = src/convert.c\
-src/hexatodecimal.c\
-test/test_main.c\
-unity/unity.c
+TEST_SRC =test/test_main.c\
+unity/unity.c\
 
-
-
-TEST_OUTPUT = $(BULID)/Test_$(PROJECT_NAME).$(EXEC)
 
 # All include folders with header files
 INC = inc\
 -Iunity\
 
-INCLUDE_LIBS = -lcunit
+#INCLUDE_LIBS = -lcunit
 
 CFLAGS = -I$(INC)
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).$(EXEC)
 
-# Default target build
-$(PROJECT_NAME):all
 
 # Run the target even if the matching name exists
-.PHONY: run clean test all
+.PHONY: all test coverage run clean doc
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) -I$(INC) -o $(PROJECT_OUTPUT)
+	gcc $(MAIN_NAME) $(SRC) $(INC) -o $(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
 
-run: $(PROJECT_NAME)
-	./$(PROJECT_OUTPUT)
+run: $(PROJT_NAME)
+	$(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
 
-test: $(TEST_SRC)
-	gcc $(TEST_SRC) -I$(INC) -o $(call FixPath,$(BUILD)/Test_$(PROJECT_NAME).$(EXEC))
-	./$(call FixPath,$(BUILD)/Test_$(PROJECT_NAME).$(EXEC))
+test: $(SRC) $(TEST_SRC) $(BUILD)
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+
+coverage:${PROJECT_NAME} $(BUILD)
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	$(MOVE) *.gcno src
+	$(MOVE) *.gcda src
+	gcov -a $(SRC)
+	$(RM) $(call FixPath,src/*.gcda)
+	$(RM) $(call FixPath,src/*.gcno)
+
+doc:
+	make -C documentation
+
+cppcheck:
+	cppcheck --enable=all $(CPPCHECK_INC) *.c
 
 clean:
-	rm -rf $(BUILD)
+	$(RM) $(call FixPath,$(BUILD)/*)
+	make clean -C doc
+	rmdir $(BUILD) doc/html
 
 $(BUILD):
 	mkdir build
