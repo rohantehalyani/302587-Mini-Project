@@ -40,7 +40,7 @@ unity/unity.c\
 INC = inc\
 -Iunity\
 
-#INCLUDE_LIBS = -lcunit
+$(PROJT_NAME): all
 
 CFLAGS = -I$(INC)
 
