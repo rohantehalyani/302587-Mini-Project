@@ -3,12 +3,12 @@
 ## Introduction
 * This program is to provide easy solution for the conversion of different numeric conversion 
 * The solution is to use algorithum which give fast conversion between data types
-* 1. Decimal to binary
-* 2. binary to Decimal
-* 3. Decimal to Hexadecial
-* 4. Hexadecial to Decimal
-* 5. Decimal to Octal
-* 6. Octal to Decimal
+ 1. Decimal to binary
+ 2. binary to Decimal
+ 3. Decimal to Hexadecial
+ 4. Hexadecial to Decimal
+ 5. Decimal to Octal
+ 6. Octal to Decimal
 
 ## Research
 * For conversion of a simple decimal to binary we have used conventional method 
