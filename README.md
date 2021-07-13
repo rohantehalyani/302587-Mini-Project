@@ -17,4 +17,16 @@ Folder             | Description
 SF No. |  Name   |    Features    | Issuess Raised |Issues Resolved|No Test Cases|Test Case Pass
 -------|---------|----------------|----------------|---------------|-------------|--------------
 `302587` | Rohan Tehalyani  | Numeric Conversion    | Nil     | Nil   |4  | YES    
-   
+
+
+## Challenges Faced and How Was It Overcome
+
+1. Inputing char as it was hexadecimal for hexa to decimal conversion -> got decimal numeric 
+2. Including files -> later resolved
+
+
+### Miscellaneous
+* Inclusion of appropriate comments
+* YML for windows created
+* doxyfile generated
+* codacy badge included
