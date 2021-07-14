@@ -20,8 +20,6 @@
 
 
 ![](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/example.PNG)
-## Defining the System
-![System - Diagram](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/flowchart.PNG)
 
 ## SWOT Analysis
 ![SWOT - Analysis](https://github.com/rohantehalyani/302587-Mini-Project/blob/main/1_Requirements/swto.PNG)
