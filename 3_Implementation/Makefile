@@ -30,21 +30,18 @@ MAIN_NAME = main.c
 
 
 # All source code files
-SRC = main.c\
-inc/header.h\
+SRC =inc/header.h\
 src/convert.c\
-src/hexatodecimal.c\
+src/hexatodecimal.c
 
 # All test source files
-TEST_SRC = src/convert.c\
-src/hexatodecimal.c\
-test/test_main.c\
-unity/unity.c
+TEST_SRC = test/test_main.c\
+unity/unity.c\
 
 #TEST_OUTPUT = $(BULID)/Test_$(PROJECT_NAME).$(EXEC)
 
 # All include folders with header files
-INC = inc\
+INC = -Iinc\
 -Iunity\
 
 $(PROJT_NAME): all
